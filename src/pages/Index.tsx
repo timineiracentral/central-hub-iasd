@@ -1,30 +1,25 @@
-import {
-  Users,
-  FileText,
-  DollarSign,
-  Settings,
-  Calendar,
-  BarChart,
-  Mail,
-  Shield,
-  BookOpen,
-  Briefcase,
-  Scale
-} from "lucide-react";
+import { Truck } from "lucide-react";
 import SystemCard from "@/components/SystemCard";
 
 const systems = [
-  { name: "Secretaria", description: "Gestão de membros e transferência", icon: Users, url: "#", color: "bg-blue-50" },
-  { name: "Tesouraria", description: "Controle financeiro e remessas", icon: DollarSign, url: "#", color: "bg-green-50" },
-  { name: "Documentos", description: "Arquivos e modelos oficiais", icon: FileText, url: "#", color: "bg-orange-50" },
-  { name: "Configurações", description: "Ajustes do sistema e perfil", icon: Settings, url: "#", color: "bg-slate-50" },
-  { name: "Agenda", description: "Calendário e eventos da associação", icon: Calendar, url: "#", color: "bg-purple-50" },
-  { name: "Relatórios", description: "Dados estatísticos e métricas", icon: BarChart, url: "#", color: "bg-indigo-50" },
-  { name: "Comunicação", description: "Notícias e avisos internos", icon: Mail, url: "#", color: "bg-pink-50" },
-  { name: "Jurídico", description: "Processos e consultoria legal", icon: Scale, url: "#", color: "bg-red-50" },
-  { name: "Educação", description: "Gestão escolar e acadêmica", icon: BookOpen, url: "#", color: "bg-yellow-50" },
-  { name: "Recursos Humanos", description: "Gestão de colaboradores", icon: Briefcase, url: "#", color: "bg-emerald-50" },
+  { name: "Almox-pro", description: "Gestão de almoxarifado", imageSrc: "./icons/almox-pro.png", url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-50" },
+  { name: "Aluguel-pro", description: "Gestão de aluguéis", imageSrc: "./icons/aluguel-pro.png", url: "https://aluguelpro.mineiracentral.org.br/", color: "bg-green-50" },
+  { name: "Controle Veículos", description: "Controle de frota", imageSrc: "./icons/controle-veiculos.ico", url: "https://controleveiculos.mineiracentral.org.br/", color: "bg-orange-50" },
+  { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-50" },
+  { name: "Documentação", description: "Documentação interna", imageSrc: "./icons/documentacao.png", url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600" },
 ];
+
+// Sistemas futuros (comentados):
+// { name: "Secretaria", description: "Gestão de membros e transferência", icon: Users, url: "#", color: "bg-blue-50" },
+// { name: "Tesouraria", description: "Controle financeiro e remessas", icon: DollarSign, url: "#", color: "bg-green-50" },
+// { name: "Documentos", description: "Arquivos e modelos oficiais", icon: FileText, url: "#", color: "bg-orange-50" },
+// { name: "Configurações", description: "Ajustes do sistema e perfil", icon: Settings, url: "#", color: "bg-slate-50" },
+// { name: "Agenda", description: "Calendário e eventos da associação", icon: Calendar, url: "#", color: "bg-purple-50" },
+// { name: "Relatórios", description: "Dados estatísticos e métricas", icon: BarChart, url: "#", color: "bg-indigo-50" },
+// { name: "Comunicação", description: "Notícias e avisos internos", icon: Mail, url: "#", color: "bg-pink-50" },
+// { name: "Jurídico", description: "Processos e consultoria legal", icon: Scale, url: "#", color: "bg-red-50" },
+// { name: "Educação", description: "Gestão escolar e acadêmica", icon: BookOpen, url: "#", color: "bg-yellow-50" },
+// { name: "Recursos Humanos", description: "Gestão de colaboradores", icon: Briefcase, url: "#", color: "bg-emerald-50" },
 
 
 const Index = () => {
@@ -58,9 +53,9 @@ const Index = () => {
         <div className="opacity-5 absolute -left-10 -top-10 w-64 h-64 bg-white rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col items-center">
-          <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl p-4 transition-transform hover:scale-105 duration-500">
+          <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl p-4">
             <img
-              src="/logo.png"
+              src="./logo.png"
               alt="IASD Logo"
               className="w-full h-full object-contain"
             />
