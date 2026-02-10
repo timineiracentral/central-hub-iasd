@@ -53,9 +53,9 @@ const Index = () => {
         <div className="opacity-5 absolute -left-10 -top-10 w-64 h-64 bg-white rounded-full blur-3xl pointer-events-none"></div>
 
         <div className="relative z-10 flex flex-col items-center">
-          <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-2xl p-4">
+          <div className="w-32 h-32 flex items-center justify-center">
             <img
-              src="./logo.png"
+              src="/logo.png"
               alt="IASD Logo"
               className="w-full h-full object-contain"
             />
