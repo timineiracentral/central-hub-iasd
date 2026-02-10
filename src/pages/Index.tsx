@@ -7,6 +7,7 @@ const systems = [
   { name: "Controle Veículos", description: "Controle de frota", imageSrc: "./icons/controle-veiculos.ico", url: "https://controleveiculos.mineiracentral.org.br/", color: "bg-orange-50" },
   { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-50" },
   { name: "Documentação", description: "Documentação interna", imageSrc: "./icons/documentacao.png", url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600" },
+  { name: "AMC Log", description: "Gestão Inteligente de Entregas", imageSrc: "./icons/amc-log.png", url: "https://log.mineiracentral.org.br", color: "bg-amber-100" },
 ];
 
 // Sistemas futuros (comentados):
