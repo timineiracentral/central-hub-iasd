@@ -1,13 +1,20 @@
-import { Truck } from "lucide-react";
+import {
+  Package,
+  KeyRound,
+  Car,
+  Truck,
+  FileText,
+  PackageCheck,
+} from "lucide-react";
 import SystemCard from "@/components/SystemCard";
 
 const systems = [
-  { name: "Almox-pro", description: "Gestão de almoxarifado", imageSrc: "./icons/almox-pro.png", url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-50" },
-  { name: "Aluguel-pro", description: "Gestão de aluguéis", imageSrc: "./icons/aluguel-pro.png", url: "https://aluguelpro.mineiracentral.org.br/", color: "bg-green-50" },
-  { name: "Controle Veículos", description: "Controle de frota", imageSrc: "./icons/controle-veiculos.ico", url: "https://controleveiculos.mineiracentral.org.br/", color: "bg-orange-50" },
-  { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-50" },
-  { name: "Documentação", description: "Documentação interna", imageSrc: "./icons/documentacao.png", url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600" },
-  { name: "AMC Log", description: "Gestão Inteligente de Entregas", imageSrc: "./icons/amc-log.png", url: "https://log.mineiracentral.org.br", color: "bg-amber-100" },
+  { name: "Almox-pro", description: "Gestão de almoxarifado", icon: Package, url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-100", iconColor: "text-blue-800" },
+  { name: "Aluguel-pro", description: "Gestão de aluguéis", icon: KeyRound, url: "https://aluguelpro.mineiracentral.org.br/", color: "bg-emerald-100", iconColor: "text-emerald-800" },
+  { name: "Controle Veículos", description: "Controle de frota", icon: Car, url: "https://controleveiculos.mineiracentral.org.br/", color: "bg-orange-100", iconColor: "text-orange-800" },
+  { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-100", iconColor: "text-amber-800" },
+  { name: "Documentação", description: "Documentação interna", icon: FileText, url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600", iconColor: "text-white" },
+  { name: "AMC Log", description: "Gestão Inteligente de Entregas", icon: PackageCheck, url: "https://log.mineiracentral.org.br", color: "bg-amber-200", iconColor: "text-amber-900" },
 ];
 
 // Sistemas futuros (comentados):
@@ -33,7 +40,7 @@ const Index = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#023164] mb-6 tracking-tight">
               Seja bem-vindo.
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 font-light max-w-2xl">
+            <p className="text-xl md:text-2xl text-slate-700 font-light max-w-2xl">
               Este é o novo ERP da Associação Mineira Central da IASD.
             </p>
           </div>
