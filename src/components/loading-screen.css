@@ -1,0 +1,43 @@
+/* Loading screen: keyframes and utilities. Import where LoadingScreen is used. */
+
+:root {
+  --loading-indicator-color: rgba(255, 255, 255, 0.9);
+}
+
+.loading-screen-indicator {
+  width: 120px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-screen-indicator::after {
+  content: "";
+  display: block;
+  width: 40%;
+  height: 100%;
+  background: var(--loading-indicator-color);
+  border-radius: 2px;
+  animation: loading-screen-bar 1.2s ease-in-out infinite;
+}
+
+@keyframes loading-screen-bar {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-screen-indicator::after {
+    animation: none !important;
+    transform: translateX(0);
+    opacity: 0.7;
+  }
+}

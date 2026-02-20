@@ -6,6 +6,7 @@ import {
   FileText,
   PackageCheck,
 } from "lucide-react";
+import { cn } from "@/lib/utils";
 import SystemCard from "@/components/SystemCard";
 
 const systems = [
@@ -32,7 +33,12 @@ const systems = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full bg-slate-50 lg:grid lg:grid-cols-7 font-sans">
+    <div
+      className={cn(
+        "min-h-screen w-full bg-slate-50 lg:grid lg:grid-cols-7 font-sans",
+        "animate-in fade-in-0 slide-in-from-bottom-2 duration-500"
+      )}
+    >
       {/* Main Content - spanned 6 cols */}
       <main className="col-span-1 lg:col-span-6 p-8 md:p-12 lg:p-20 flex flex-col justify-center min-h-[80vh] lg:min-h-screen">
         <div className="max-w-7xl mx-auto w-full">

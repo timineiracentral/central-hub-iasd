@@ -55,6 +55,7 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     --iasd-blue: 211 96% 20%; /* #023164 converted to HSL approx 211, 96%, 20% */
+    --loading-bg: #0a3868;
   }
 
   .dark {
@@ -103,5 +104,13 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Entrada do hub: respeitar prefers-reduced-motion (WCAG C39) */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in {
+    animation: none !important;
+    opacity: 1;
   }
 }
