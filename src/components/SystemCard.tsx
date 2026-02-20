@@ -1,7 +1,10 @@
 import { LucideIcon } from "lucide-react";
+import { SVGProps, ComponentType } from "react";
+
+type IconType = LucideIcon | ComponentType<SVGProps<SVGSVGElement>>;
 
 interface SystemCardProps {
-  icon: LucideIcon;
+  icon: IconType;
   name: string;
   description: string;
   url: string;

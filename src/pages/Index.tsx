@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import SystemCard from "@/components/SystemCard";
+import GestorFrotaIcon from "@/components/icons/GestorFrotaIcon";
 
 const systems = [
   { name: "Almox-pro", description: "Gestão de almoxarifado", icon: Package, url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-100", iconColor: "text-blue-800" },
@@ -16,6 +17,7 @@ const systems = [
   { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-100", iconColor: "text-amber-800" },
   { name: "Documentação", description: "Documentação interna", icon: FileText, url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600", iconColor: "text-white" },
   { name: "AMC Log", description: "Gestão Inteligente de Entregas", icon: PackageCheck, url: "https://log.mineiracentral.org.br", color: "bg-amber-200", iconColor: "text-amber-900" },
+  { name: "Gestor de Frota", description: "Gestão administrativa da frota veicular", icon: GestorFrotaIcon, url: "https://gestordefrota.mineiracentral.org.br/", color: "bg-cyan-100", iconColor: "text-cyan-800" },
 ];
 
 // Sistemas futuros (comentados):
