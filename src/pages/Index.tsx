@@ -9,6 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import SystemCard from "@/components/SystemCard";
 import GestorFrotaIcon from "@/components/icons/GestorFrotaIcon";
+import EventosIcon from "@/components/icons/EventosIcon";
 
 const systems = [
   { name: "Almox-pro", description: "Gestão de almoxarifado", icon: Package, url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-100", iconColor: "text-blue-800" },
@@ -18,6 +19,7 @@ const systems = [
   { name: "Documentação", description: "Documentação interna", icon: FileText, url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600", iconColor: "text-white" },
   { name: "AMC Log", description: "Gestão Inteligente de Entregas", icon: PackageCheck, url: "https://log.mineiracentral.org.br", color: "bg-amber-200", iconColor: "text-amber-900" },
   { name: "Gestor de Frota", description: "Gestão administrativa da frota veicular", icon: GestorFrotaIcon, url: "https://gestordefrota.mineiracentral.org.br/", color: "bg-cyan-100", iconColor: "text-cyan-800" },
+  { name: "Eventos", description: "Gestão de eventos", icon: EventosIcon, url: "https://eventos.mineiracentral.org.br/", color: "bg-violet-100", iconColor: "text-violet-800" },
 ];
 
 // Sistemas futuros (comentados):
@@ -25,7 +27,6 @@ const systems = [
 // { name: "Tesouraria", description: "Controle financeiro e remessas", icon: DollarSign, url: "#", color: "bg-green-50" },
 // { name: "Documentos", description: "Arquivos e modelos oficiais", icon: FileText, url: "#", color: "bg-orange-50" },
 // { name: "Configurações", description: "Ajustes do sistema e perfil", icon: Settings, url: "#", color: "bg-slate-50" },
-// { name: "Agenda", description: "Calendário e eventos da associação", icon: Calendar, url: "#", color: "bg-purple-50" },
 // { name: "Relatórios", description: "Dados estatísticos e métricas", icon: BarChart, url: "#", color: "bg-indigo-50" },
 // { name: "Comunicação", description: "Notícias e avisos internos", icon: Mail, url: "#", color: "bg-pink-50" },
 // { name: "Jurídico", description: "Processos e consultoria legal", icon: Scale, url: "#", color: "bg-red-50" },
