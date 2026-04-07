@@ -36,6 +36,15 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Garante que o deploy não publica o index.html de desenvolvimento (evita tela branca em produção).
+      - name: Verify production bundle
+        run: |
+          test -f dist/index.html
+          if grep -q '/src/main.tsx' dist/index.html; then
+            echo "::error::dist/index.html ainda referencia /src/main.tsx — build inválido."
+            exit 1
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
