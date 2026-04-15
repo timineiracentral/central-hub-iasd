@@ -1,26 +1,7 @@
-import {
-  Package,
-  KeyRound,
-  Car,
-  Truck,
-  FileText,
-  PackageCheck,
-} from "lucide-react";
 import { cn } from "@/lib/utils";
 import SystemCard from "@/components/SystemCard";
-import GestorFrotaIcon from "@/components/icons/GestorFrotaIcon";
-import EventosIcon from "@/components/icons/EventosIcon";
-
-const systems = [
-  { name: "Almox-pro", description: "Gestão de almoxarifado", icon: Package, url: "https://almox-amc.mineiracentral.org.br/", color: "bg-blue-100", iconColor: "text-blue-800" },
-  { name: "Aluguel-pro", description: "Gestão de aluguéis", icon: KeyRound, url: "https://aluguelpro.mineiracentral.org.br/", color: "bg-emerald-100", iconColor: "text-emerald-800" },
-  { name: "Controle Veículos", description: "Controle de frota", icon: Car, url: "https://controleveiculos.mineiracentral.org.br/", color: "bg-orange-100", iconColor: "text-orange-800" },
-  { name: "Mudanças-pro", description: "Gestão de mudanças", icon: Truck, url: "https://mudancas-pro.mineiracentral.org.br/", color: "bg-amber-100", iconColor: "text-amber-800" },
-  { name: "Documentação", description: "Documentação interna", icon: FileText, url: "https://docs.mineiracentral.org.br/", color: "bg-indigo-600", iconColor: "text-white" },
-  { name: "AMC Log", description: "Gestão Inteligente de Entregas", icon: PackageCheck, url: "https://log.mineiracentral.org.br", color: "bg-amber-200", iconColor: "text-amber-900" },
-  { name: "Gestor de Frota", description: "Gestão administrativa da frota veicular", icon: GestorFrotaIcon, url: "https://gestordefrota.mineiracentral.org.br/", color: "bg-cyan-100", iconColor: "text-cyan-800" },
-  { name: "Eventos", description: "Gestão de eventos", icon: EventosIcon, url: "https://eventos.mineiracentral.org.br/", color: "bg-violet-100", iconColor: "text-violet-800" },
-];
+import { FeedbackModal } from "@/components/FeedbackModal";
+import { hubSystems } from "@/data/systems";
 
 // Sistemas futuros (comentados):
 // { name: "Secretaria", description: "Gestão de membros e transferência", icon: Users, url: "#", color: "bg-blue-50" },
@@ -55,8 +36,8 @@ const Index = () => {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {systems.map((sys, index) => (
-              <SystemCard key={index} {...sys} />
+            {hubSystems.map((sys) => (
+              <SystemCard key={sys.id} icon={sys.icon} name={sys.name} description={sys.description} url={sys.url} color={sys.color} iconColor={sys.iconColor} />
             ))}
           </div>
         </div>
@@ -87,6 +68,8 @@ const Index = () => {
           <p className="text-xs opacity-60 mt-2">Igreja Adventista do Sétimo Dia</p>
         </div>
       </footer>
+
+      <FeedbackModal />
     </div>
   );
 };
